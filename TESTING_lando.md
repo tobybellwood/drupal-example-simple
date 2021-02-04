@@ -1,5 +1,5 @@
-Lando Drupal 9 advanced - php7.4, nginx, mariadb, solr, redis
-=============================================================
+Lando Drupal 9 govcms - php7.4, nginx, mariadb, solr, redis
+===========================================================
 
 This example exists primarily to test the following documentation:
 
@@ -32,20 +32,20 @@ lando drush cr -y
 lando drush status | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_mailhog_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_php_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_cli_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_solr_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_redis_1
-docker ps --filter label=com.docker.compose.project=drupal9exampleadvanced | grep Up | grep drupal9exampleadvanced_lagooncli_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_nginx_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_mailhog_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_php_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_solr_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_redis_1
+docker ps --filter label=com.docker.compose.project=drupal9examplegovcms | grep Up | grep drupal9examplegovcms_lagooncli_1
 
 # Should ssh against the cli container by default
 lando ssh -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal9-example-advanced.lndo.site
+lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal9-example-govcms.lndo.site
 lando ssh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running PHP 7.4
