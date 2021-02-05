@@ -20,10 +20,10 @@
         }
     ],
     "require": {
-        "amazeeio/drupal_integrations": "0.3.3",
-        "composer/installers": "v1.9.0",
+        "amazeeio/drupal_integrations": "0.3.4",
+        "composer/installers": "v1.10.0",
         "cweagans/composer-patches": "dev-master",
-        "govcms-poc/govcms": "2.x-dev",
+        "govcms/govcms": "2.0.0-alpha.1",
         "drupal/lagoon_logs": "1.1.0",
         "drupal/redis": "1.4.0",
         "drush/drush": "10.3.6"
